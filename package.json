@@ -1,0 +1,37 @@
+{
+  "name": "krds-bookapplication",
+  "version": "1.0.0",
+  "description": "A Test Assignment on building a book application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaisurya07/KRDS-BookApplication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaisurya07/KRDS-BookApplication/issues"
+  },
+  "homepage": "https://github.com/Jaisurya07/KRDS-BookApplication#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.15.1",
+    "aws-sdk": "^2.713.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.23",
+    "redis": "^3.0.2",
+    "request": "^2.88.2",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
