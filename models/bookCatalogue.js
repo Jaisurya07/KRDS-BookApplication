@@ -1,3 +1,4 @@
+// *** Model for Books that needs to be inserted in Book Catalogue... ***//
 const { Schema, model } = require('mongoose');
 
 const bookCataloguechema = new Schema(

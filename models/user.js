@@ -1,3 +1,4 @@
+// User Model for Storing User Information....
 const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema(

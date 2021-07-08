@@ -1,3 +1,5 @@
+// *** Graph QL Schemas for User Model
+
 exports.types = `
 type User {
     _id: ID!
@@ -47,11 +49,15 @@ type User {
     loggedIn: Boolean!
   }`;
 
+// *** Graph QL Queries for User Model
+
 exports.queries = `
     login(loginInput : LoginInput): LoginData!
     refreshToken(userID: String!): Auth!
     searchUser(username : String!) : User!
     `;
+
+// *** Graph QL Mutations for User Model
 
 exports.mutations = `
     signUp(signupInput : SignUpInput): UserData!

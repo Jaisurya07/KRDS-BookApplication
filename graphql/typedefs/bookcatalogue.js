@@ -1,3 +1,4 @@
+// *** Graph QL Schemas for BookCatalogue Model
 exports.types = `
 
 enum Genre {
@@ -39,11 +40,12 @@ type BookData{
     doneBy : DoneBy
 }
 `;
-
+// *** Graph QL Queries for BookCatalogue Model
 exports.queries = `
 searchBook(searchKey : SearchCriteria!,value : String!) : BookCatalogue!
 `;
 
+// *** Graph QL Mutations for BookCatalogue Model
 exports.mutations = `
 addBook(addBookInput : AddBookInput) : BookData!
 `;

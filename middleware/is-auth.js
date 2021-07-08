@@ -1,3 +1,4 @@
+// *** Middleware to authenticate other services across the application (SS0)
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 

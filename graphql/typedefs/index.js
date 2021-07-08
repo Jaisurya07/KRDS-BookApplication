@@ -1,3 +1,5 @@
+// *** driver file to Integrate different GraphQL Shemas... ***
+
 const { gql } = require('apollo-server-express');
 const User = require('./user');
 const BookCatalogue = require('./bookcatalogue');
