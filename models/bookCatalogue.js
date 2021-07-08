@@ -12,6 +12,11 @@ const bookCataloguechema = new Schema(
       trim: true,
       unique: true,
     },
+    genre: {
+      type: String,
+      trim: true,
+      unique: true,
+    },
     author: {
       type: String,
       trim: true,

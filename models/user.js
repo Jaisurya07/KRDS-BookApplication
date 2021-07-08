@@ -44,7 +44,7 @@ const userSchema = new Schema(
       type: String,
     },
 
-    personalisedBookList: [
+    favourites: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Bookcatalogue',

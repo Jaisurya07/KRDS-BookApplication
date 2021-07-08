@@ -9,7 +9,7 @@ type User {
     address: String
     country: String
     password : String!
-    personalisedBookList : [String]
+    favourites: [BookCatalogue!]
     createdAt: String!
     updatedAt: String!
   }
@@ -27,19 +27,34 @@ type User {
   input SignUpInput {
         email: String!
         password: String!
-        verifypassword : String!
   }
 
+  input UpdateUserInput {
+    email: String!  
+    firstname: String!
+    lastname: String!
+    username: String!
+    mobile: String!
+    address: String
+    country: String
+  }
   type UserData {
     accountDetails: User
     accountCreated: Boolean!
+  }
+  type LoginData {
+    accountDetails: User
+    loggedIn: Boolean!
   }`;
 
 exports.queries = `
-    login(loginInput : LoginInput): Boolean!
+    login(loginInput : LoginInput): LoginData!
     refreshToken(userID: String!): Auth!
     searchUser(username : String!) : User!
     `;
 
 exports.mutations = `
-    SignUp(signupInput : SignUpInput): UserData`;
+    signUp(signupInput : SignUpInput): UserData!
+    updateProfile(updateUserInput : UpdateUserInput) : User!
+    addToFavourites(email:String!,bookTitle:String!) : User!
+    `;

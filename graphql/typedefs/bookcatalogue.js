@@ -6,7 +6,12 @@ enum Genre {
     SCIFI
     HORROR
 }
-type bookCatalogue{
+
+enum SearchCriteria{
+    ISBN
+    BOOKTITLE
+}
+type BookCatalogue{
     _id : ID!
     bookTitle : String!
     ISBN : String!
@@ -16,25 +21,29 @@ type bookCatalogue{
 }
 
 input AddBookInput {
+    email : String!
     bookTitle : String!
     ISBN : String!
     genre : Genre!
     author : String!
     publisher : String!
 }
+ type DoneBy {
+     email : String!
+     username : String!
+ }
 
-
-type bookData{
-    bookDetails : bookCatalogue!
+type BookData{
+    bookDetails : BookCatalogue!
     bookAdded : Boolean!
+    doneBy : DoneBy
 }
 `;
 
 exports.queries = `
-searchBookbyISBN(ISBN : String!) ; bookCatalogue!
-searchBookbyTitle(bookTitle : String!) : bookCatalogue!
+searchBook(searchKey : SearchCriteria!,value : String!) : BookCatalogue!
 `;
 
 exports.mutations = `
-addBook(addBookInput : AddBookInput) : bookData!
+addBook(addBookInput : AddBookInput) : BookData!
 `;
