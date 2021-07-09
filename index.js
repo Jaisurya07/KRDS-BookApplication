@@ -44,7 +44,7 @@ app.get(
   passport.authenticate('google', { scope: ['email', 'profile'] })
 );
 
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
   res.send('Welcome to KRDS BOOk APP!');
 });
 
