@@ -28,7 +28,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:5000/auth/google/callback',
+      callbackURL:
+        'https://krds-product-app.herokuapp.com/auth/google/callback',
       passReqToCallback: true,
     },
     function (request, accessToken, refreshToken, profile, done) {
@@ -57,7 +58,8 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_APP_ID,
       clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: 'http://localhost:5000/auth/facebook/callback',
+      callbackURL:
+        'https://krds-product-app.herokuapp.com/auth/facebook/callback',
     },
     function (accessToken, refreshToken, profile, cb) {
       console.log(profile);
